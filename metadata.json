@@ -1,0 +1,6 @@
+{
+  "name": "شاهر حساباتي",
+  "description": "منصة مميزة لعرض حسابات التواصل الاجتماعي (تيك توك، ستيم، ديسكورد) مع خلفية موسيقية وصورة مخصصة، وواجهة تحكم محمية لتعديل البيانات.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

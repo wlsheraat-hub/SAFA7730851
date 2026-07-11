@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Tajawal", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+body {
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  background-color: #030014;
+  color: #f3f4f6;
+}
+
+/* Custom background effect animations */
+
+/* Lightning Flash */
+@keyframes lightning-flash {
+  0%, 82%, 84%, 88%, 90%, 100% {
+    opacity: 0;
+  }
+  83% {
+    opacity: 0.75;
+  }
+  85% {
+    opacity: 0.2;
+  }
+  86% {
+    opacity: 0.95;
+  }
+}
+
+/* Lightning Bolt Strike */
+@keyframes lightning-bolt-strike {
+  0%, 84%, 88%, 100% {
+    opacity: 0;
+    filter: drop-shadow(0 0 0px rgba(168, 85, 247, 0));
+  }
+  85% {
+    opacity: 1;
+    filter: drop-shadow(0 0 25px rgba(168, 85, 247, 1)) drop-shadow(0 0 50px rgba(139, 92, 246, 1));
+  }
+  86% {
+    opacity: 0.2;
+    filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.4));
+  }
+  87% {
+    opacity: 0.9;
+    filter: drop-shadow(0 0 35px rgba(168, 85, 247, 1)) drop-shadow(0 0 70px rgba(139, 92, 246, 1));
+  }
+}
+
+/* Ember Rise Animation */
+@keyframes ember-rise {
+  0% {
+    transform: translateY(105vh) translateX(0) scale(0.6) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-10vh) translateX(var(--drift, 60px)) scale(1.6) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Bottom Fire Glow */
+@keyframes fire-glow-pulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.15) translateY(-15px);
+  }
+}
+
+.animate-lightning-1 {
+  animation: lightning-flash 3.5s infinite ease-in-out;
+}
+
+.animate-lightning-2 {
+  animation: lightning-flash 5.2s infinite ease-in-out;
+}
+
+.animate-bolt-1 {
+  animation: lightning-bolt-strike 4.5s infinite ease-in-out;
+}
+
+.animate-bolt-2 {
+  animation: lightning-bolt-strike 7s infinite ease-in-out;
+}
+
+.animate-fire-glow {
+  animation: fire-glow-pulse 2.5s infinite ease-in-out;
+}
+
+/* Custom scrollbar to keep it sleek */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(3, 0, 20, 0.5);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.3);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.6);
+}
